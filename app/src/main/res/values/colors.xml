@@ -3,4 +3,16 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="highlight">#74F44A</color>
+    <color name="c1">#0027FF</color>
+    <color name="c2">#FF0015</color>
+    <color name="c3">#BB1AD6</color>
+    <color name="c4">#F44336</color>
+    <color name="c5">#FFEB3B</color>
+    <color name="c6">#00FFE6</color>
+    <color name="c7">#7EE308</color>
+    <color name="c8">#F13D7A</color>
+    <color name="c9">#A629F4</color>
+    <color name="c10">#000000</color>
 </resources>

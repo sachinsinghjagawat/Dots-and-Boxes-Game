@@ -4,10 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -26,6 +28,9 @@ public class Main2Activity extends AppCompatActivity {
         int numberOfPlayers = myIntent.getIntExtra("numberOfPlayers" , 0);
         CustomView v1 = new CustomView(this , xAxis , yAxis );
         mLinearLayout.addView(v1);
+        v1.setDrawingCacheEnabled(true);
+        v1.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
+        Bitmap bitmap = v1.getDrawingCache();
 //        Custom2View v2 = new Custom2View(this, xAxis , yAxis , numberOfPlayers);
 //        mLinearLayout.addView(v2);
 

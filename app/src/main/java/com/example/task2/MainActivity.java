@@ -1,14 +1,19 @@
 package com.example.task2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     EditText yAxis;
     EditText players;
     int i1 ,i2, numberOfPlayers;
+    Dialog myDialog ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,10 +85,42 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.example_menu , menu);
-        return true;
+    public void showPoup(View v) {
+        TextView instClose ;
+        myDialog.setContentView(R.layout.pop_up);
+        instClose = (TextView) myDialog.findViewById(R.id.closeButoon);
+        instClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+        myDialog.show();
+
     }
+
+////    @Override
+//    public boolean onCreateOptionsMenu(Menu menu ) {
+//        item = menu.findItem(R.id.instructions);
+//        item.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+//            @Override
+//            public boolean onMenuItemClick(MenuItem item) {
+//                myDialog.show();
+//                return true;
+//            }
+//        });
+//            return true ;
+////        MenuInflater inflater = getMenuInflater();
+////        inflater.inflate(R.menu.example_menu , menu);
+////        return true;
+//    }
+////    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+////
+////        switch (item.getItemId()){
+////            case R.id.instructions:{
+////                myDialog.show();
+////            }
+////        }
+////        return super.onOptionsItemSelected(item);
+////    }
 }

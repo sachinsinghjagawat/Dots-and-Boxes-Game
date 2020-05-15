@@ -16,6 +16,7 @@ import android.widget.TextView;
 public class Main2Activity extends AppCompatActivity {
 
     LinearLayout mLinearLayout ;
+    CustomView v1 ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +27,9 @@ public class Main2Activity extends AppCompatActivity {
         int xAxis = myIntent.getIntExtra("xAxis" , 0);
         int yAxis = myIntent.getIntExtra("yAxis" , 0);
         int numberOfPlayers = myIntent.getIntExtra("numberOfPlayers" , 0);
-        CustomView v1 = new CustomView(this , xAxis , yAxis );
+        v1 = new CustomView(this , xAxis , yAxis , numberOfPlayers );
         mLinearLayout.addView(v1);
-        v1.setDrawingCacheEnabled(true);
-        v1.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
-        Bitmap bitmap = v1.getDrawingCache();
+
 //        Custom2View v2 = new Custom2View(this, xAxis , yAxis , numberOfPlayers);
 //        mLinearLayout.addView(v2);
 
@@ -41,6 +40,7 @@ public class Main2Activity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.example_menu , menu);
+        inflater.inflate(R.menu.undo , menu);
         return true;
     }
 

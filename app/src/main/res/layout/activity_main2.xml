@@ -6,20 +6,7 @@
     android:layout_height="match_parent"
     android:id="@+id/ll"
     android:orientation="vertical"
+    android:background="@drawable/gradients"
     tools:context=".Main2Activity">
-
-<!--    <FrameLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:layout_marginBottom="10dp">-->
-
-<!--        <com.example.task2.CustomView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"/>-->
-
-<!--        <com.example.task2.Custom2View-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"/>-->
-<!--    </FrameLayout>-->
 
 </LinearLayout>
